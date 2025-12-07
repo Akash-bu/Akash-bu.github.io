@@ -62,6 +62,24 @@ a {
   min-height: 420px;
 }
 
+.note-thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 220px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  background: var(--panel);
+}
+
+.note-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .badge {
   display: inline-flex;
   align-items: center;
@@ -357,7 +375,7 @@ a {
 .note-card__figure {
   margin: 0;
   width: 100%;
-  max-width: 960px;
+  max-width: 720px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--panel);
@@ -377,6 +395,56 @@ a {
   font-size: 14px;
   border-top: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.02);
+}
+
+.hobby-list {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.hobby {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.hobby__title {
+  margin: 0 0 6px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.hobby__desc {
+  margin: 0;
+  color: var(--muted);
+}
+
+.inspiration-list {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.inspiration-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.inspiration__name {
+  margin: 0 0 6px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.inspiration__note {
+  margin: 0;
+  color: var(--muted);
 }
 
 .cta {
