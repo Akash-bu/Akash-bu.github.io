@@ -1,6 +1,4 @@
 :root {
-  --bg: #05060a;
-  --bg-alt: #0b0d14;
   --panel: #0f111a;
   --accent: #5ef0c4;
   --accent-2: #8fd1ff;
@@ -60,24 +58,6 @@ a {
 .hero__visual {
   position: relative;
   min-height: 420px;
-}
-
-.note-thumb {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 220px;
-  border-radius: var(--radius-sm);
-  overflow: hidden;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-  background: var(--panel);
-}
-
-.note-thumb img {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 .badge {
@@ -346,105 +326,46 @@ a {
   font-weight: 700;
 }
 
-.honors {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-
-.honor {
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: 16px;
-  background: rgba(255, 255, 255, 0.02);
-}
-
-.honor__title {
-  font-weight: 700;
-  color: var(--text);
-  margin: 0 0 8px;
-}
-
-.honor__desc {
-  margin: 0;
-}
-
 .note-card {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .note-card__figure {
   margin: 0;
-  width: 100%;
-  max-width: 720px;
+  width: 200px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--panel);
   box-shadow: var(--shadow);
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .note-card__figure img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 220px;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .note-card__figure figcaption {
-  padding: 12px 14px;
+  padding: 8px 12px;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 12px;
+  text-align: center;
   border-top: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.02);
 }
 
-.hobby-list {
-  display: grid;
-  gap: 12px;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-}
-
-.hobby {
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: 14px;
-  background: var(--panel);
-  box-shadow: var(--shadow);
-}
-
-.hobby__title {
-  margin: 0 0 6px;
-  color: var(--accent);
-  font-weight: 700;
-}
-
-.hobby__desc {
+.research-statement {
+  max-width: 72ch;
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--text);
+  border-left: 3px solid var(--accent);
+  padding-left: 20px;
   margin: 0;
-  color: var(--muted);
-}
-
-.inspiration-list {
-  display: grid;
-  gap: 14px;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-}
-
-.inspiration-card {
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: 14px;
-  background: var(--panel);
-  box-shadow: var(--shadow);
-}
-
-.inspiration__name {
-  margin: 0 0 6px;
-  color: var(--accent);
-  font-weight: 700;
-}
-
-.inspiration__note {
-  margin: 0;
-  color: var(--muted);
 }
 
 .cta {
